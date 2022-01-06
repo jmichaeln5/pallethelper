@@ -18,5 +18,13 @@ module Pallethelper
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.generators do |g|
+        g.test_framework(
+          :rspec,
+          fixtures: false
+        )
+        # g.factory_bot false # disables automatic generation of factories
+    end
+
   end
 end
